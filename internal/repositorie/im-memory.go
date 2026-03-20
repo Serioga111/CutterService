@@ -1,14 +1,20 @@
-package storage
+package repositorie
 
-type MemoryStorage struct {
+type InMemoryRepositorie struct {
 }
 
-func NewMemoryStorage() *MemoryStorage {
-	return &MemoryStorage{}
+func NewInMemoryRepositorie() *InMemoryRepositorie {
+	return &InMemoryRepositorie{}
 }
 
-func (s *MemoryStorage) Save(originalLink, shortLink string) error
+func (s *InMemoryRepositorie) Save(originalLink, shortLink string) error {
+	return nil
+}
 
-func (s *MemoryStorage) Get(shortLink string) (string, error)
+func (s *InMemoryRepositorie) Get(shortLink string) (string, error) {
+	return "", nil
+}
 
-func (s *MemoryStorage) Check(shortLink string) (bool, error)
+func (s *InMemoryRepositorie) Check(shortLink string) (bool, error) {
+	return false, nil
+}

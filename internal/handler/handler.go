@@ -3,14 +3,14 @@ package handler
 import (
 	"net/http"
 
-	storage "github.com/Serioga111/CutterService/internal/repositorie"
+	"github.com/Serioga111/CutterService/internal/repositorie"
 )
 
 type Handler struct {
-	storage storage.Storage
+	storage repositorie.Repositorie
 }
 
-func NewHandler(s storage.Storage) *Handler {
+func NewHandler(s repositorie.Repositorie) *Handler {
 	return &Handler{
 		storage: s,
 	}

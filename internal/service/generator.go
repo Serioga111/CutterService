@@ -17,6 +17,7 @@ func NewGenerator(repo repositorie.Repositorie) *Generator {
 	return &Generator{repo: repo}
 }
 
+// GEneration func
 func (g *Generator) GenerateShortURL(originalUrl string) (string, error) {
 	hash := sha256.Sum256([]byte(originalUrl))
 	short := hashtoStr(hash[:])
@@ -46,6 +47,7 @@ func (g *Generator) GenerateShortURL(originalUrl string) (string, error) {
 	return randomString(), nil
 }
 
+// Converting generated hash to str
 func hashtoStr(data []byte) string {
 	result := base64.RawURLEncoding.EncodeToString(data[:])
 	// Заменяем - на _ (дефис на подчеркивание)
@@ -53,6 +55,7 @@ func hashtoStr(data []byte) string {
 	return result[:10]
 }
 
+// Generating random string
 func randomString() string {
 	const chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_"
 	result := make([]byte, 10)

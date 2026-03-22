@@ -1,4 +1,3 @@
-// internal/repositorie/interface.go
 package repositorie
 
 type Repositorie interface {

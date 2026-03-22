@@ -19,7 +19,7 @@ func NewPostgresRepositorie(dsn string) (*PostgresRepositorie, error) {
 	}
 
 	if err := db.Ping(); err != nil {
-		return nil, fmt.Errorf("the database is not responding: %w", err)
+		return nil, fmt.Errorf("database is not responding: %w", err)
 	}
 
 	_, err = db.Exec(`

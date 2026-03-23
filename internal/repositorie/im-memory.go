@@ -38,6 +38,7 @@ func (r *InMemoryRepositorie) Get(shortLink string) (string, error) {
 	if !ok {
 		return "", nil
 	}
+
 	return original, nil
 }
 

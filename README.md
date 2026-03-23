@@ -35,7 +35,14 @@ docker-compose down
 # Для in-memory режима
 docker stop cutter-im
 ```
+### 4. Тесты
+``` bash 
+# Запустить все тесты
+make test
 
+# Или
+go test ./... -v
+```
 ## Использование
 
 ### Создать короткую ссылку

@@ -5,6 +5,9 @@ im:
 psql:
 	docker-compose up -d --build
 
+test:
+	go test ./... -v
+
 down:
 	docker stop cutter-im || true
 	docker rm cutter-im || true
